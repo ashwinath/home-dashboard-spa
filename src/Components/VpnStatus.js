@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import { Grid } from 'semantic-ui-react';
 
-class VpnStatus extends Component<{}, VpnStatus> {
+class VpnStatus extends Component {
     constructor(props: {}) {
         super(props);
         this.state = {
@@ -74,22 +74,22 @@ class VpnStatus extends Component<{}, VpnStatus> {
         } else if (loaded && error) {
             return <h1>An Error Occurred</h1>;
         } else {
-            return <h1>Loading</h1>;
+            return (<div/>);
         }
     }
 }
 
 const VpnGrid = ({ vpnStatus }) => (
-    <Grid.Column width={3} style={{textAlign: "center"}} verticalAlign="middle">
+    <Grid.Column width={3} style={{textAlign: 'center'}} verticalAlign='middle'>
         {vpnStatus ?
             <div>
-                <i className="fas fa-lock fa-4x green"></i>
-                <h3 className="green">VPN Connected</h3>
+                <i className='fas fa-lock fa-5x green'></i>
+                <h3 className='green'>VPN Connected</h3>
             </div>
         :
             <div>
-                <i className="fas fa-lock-open fa-4x red"></i>
-                <h3 className="red">VPN Disconnected</h3>
+                <i className='fas fa-lock-open fa-5x red'></i>
+                <h3 className='red'>VPN Disconnected</h3>
             </div>
         }
     </Grid.Column>
