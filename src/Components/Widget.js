@@ -17,9 +17,9 @@ const Widget = ({ data }) => {
             <Grid.Column/>
             <Grid.Column width={12}>
                 <Grid celled>
-                    <Grid.Row>
+                    <Grid.Row verticalAlign='middle' >
                         <Grid.Column width={3}>
-                            <Image size='small' src={icon_path}/>
+                            <Image centered='true' size='small' src={icon_path}/>
                         </Grid.Column>
                         <Grid.Column width={13}>
                             <h3>{title}</h3>
