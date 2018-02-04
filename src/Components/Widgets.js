@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React, { Component } from 'react';
-import { Grid } from 'semantic-ui-react';
 import Widget from './Widget';
 
 class Widgets extends Component {
