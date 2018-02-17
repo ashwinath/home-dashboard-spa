@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Widget from './Widget';
 
 class Widgets extends Component {
-    constructor(props: {}) {
+    constructor(props) {
         super(props);
         this.state = {
             error: false,
@@ -48,7 +48,7 @@ class Widgets extends Component {
         const { loaded, error } = this.state;
         if (loaded && !error) {
             return (
-                this.state.widgets.map(widget => <Widget data={widget} />)
+                this.state.widgets.map(widget => <Widget key={widget.title} data={widget} />)
             );
         } else if (loaded && error) {
             return <h1>An Error Occurred</h1>;
